@@ -12,3 +12,43 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+/* reset properties */
+body {
+    margin: 0;
+    padding: 0;
+}
+/* reset properties */
+
+
+* {
+    font-family: nunito;
+}
+
+/* Header */
+
+header {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    margin: 20px;
+    margin-left: 40px;
+}
+
+#logo {
+    margin-left: 10px;
+}
+
+/* Pre-Fold Content */
+
+
+img {
+    
+    border: solid white 30px;
+    box-shadow: 10px 10px;
+}
