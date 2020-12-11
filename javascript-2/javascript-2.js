@@ -35,7 +35,11 @@ let foods = [
   and then adding the results together. 
 */
 
-//CODE HERE
+// foods.forEach(function (array, index, element) {
+//   //let calories = element[index]
+//   console.log(element[index])
+
+// });
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -80,7 +84,11 @@ const products = [
   Save the copy to a new variable called 'saleProducts'.
 */
 
-//CODE HERE
+const saleProducts = products.map(element => {
+  element['price'] *= .75;
+});
+
+//console.log(saleproducts)
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -90,7 +98,9 @@ const products = [
   (Hint: look up the array method 'includes' on MDN)
 */
 
-//CODE HERE
+let blueProducts = products.filter((element) => {
+  return element['color'].includes('blue');
+});
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -129,7 +139,7 @@ const shippingInfo = {
   that combines the contactInfo and shippingInfo objects.
 */
 
-//CODE HERE
+let helensInfo = Object.assign({}, contactInfo, shippingInfo)
 
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -138,14 +148,16 @@ const shippingInfo = {
   Overwrite the name property to 'Ellen' and the email address to 'ellen@email.com'.
 */
 
-//CODE HERE
+let ellensInfo = { ...helensInfo }
+ellensInfo.name = "Ellen";
+ellensInfo.email = 'ellen@email.com';
 
 ////////////////////PROBLEM 7////////////////////
 /* 
   Save Ellen's email to a new variable using destructuring.
 */
 
-//CODE HERE
+const { email } = ellensInfo;
 
 ////////////////////PROBLEM 8////////////////////
 /*
@@ -153,7 +165,7 @@ const shippingInfo = {
   from shippingInfo to new variables using destructuring.
 */
 
-//CODE HERE
+const { zipCode, state } = shippingInfo;
 
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
