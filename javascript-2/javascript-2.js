@@ -35,11 +35,11 @@ let foods = [
   and then adding the results together. 
 */
 
-// foods.forEach(function (array, index, element) {
-//   //let calories = element[index]
-//   //console.log(element[index])
-
-// });
+foods.forEach(function (element) {
+  //let calories = element[index]
+  //console.log(element[index])
+  return element['calories'] = (element['carbs'] * 4) + element['protein'] * 4 + element['fat'] * 9;
+});
 
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
@@ -84,11 +84,10 @@ const products = [
   Save the copy to a new variable called 'saleProducts'.
 */
 
-const saleProducts = products.map(element => {
-  element['price'] *= .75;
+const saleProducts = products.map((element, i, arr) => {
+  element['price'] *= .75
+  return element;
 });
-
-//console.log(saleproducts)
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -98,10 +97,11 @@ const saleProducts = products.map(element => {
   (Hint: look up the array method 'includes' on MDN)
 */
 
-let blueProducts = products.filter((element) => {
+let blueProducts = saleProducts.filter(element => {
   return element['color'].includes('blue');
 });
 
+//console.log(blueProducts)
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -109,7 +109,11 @@ let blueProducts = products.filter((element) => {
   Save the result to a variable called orderTotal.
 */
 
-//CODE HERE
+let orderTotal = blueProducts.reduce((acc, curr) => {
+  return acc + curr.price;
+}, 0)
+
+//console.log(orderTotal)
 
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
