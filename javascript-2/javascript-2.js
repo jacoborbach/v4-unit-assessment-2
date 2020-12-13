@@ -37,7 +37,7 @@ let foods = [
 
 // foods.forEach(function (array, index, element) {
 //   //let calories = element[index]
-//   console.log(element[index])
+//   //console.log(element[index])
 
 // });
 
@@ -227,7 +227,7 @@ const userInfo = {
   using dot notation.
 */
 
-//CODE HERE
+let shouldAlert = userInfo.settings.alerts;
 
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -235,7 +235,7 @@ const userInfo = {
   using dot and/or bracket notation.
 */
 
-//CODE HERE
+let topic = userInfo.topics[userInfo.topics.length - 1]
 
 ////////////////////PROBLEM 11////////////////////
 /*
@@ -243,7 +243,8 @@ const userInfo = {
   gn@rly_c0der_007's 2nd comment using dot/bracket notation.
 */
 
-//CODE HERE
+let commenterId = userInfo.comments[1].responses[0].userId;
+// console.log(commenterId);
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -262,7 +263,20 @@ const userInfo = {
       - create at least 2 kid objects
 */
 
-//CODE HERE
+let person = {
+  name: "Jacob Orbach",
+  age: 24,
+  jobs: ['Analyst', 'Web Designer', 'Project Manager'],
+  birthday: function () {
+    this.age += 1;
+  },
+  favorites: {
+    color: 'blue',
+    number: 7,
+    book: 'Origin',
+  },
+  kids: [{ name: 'Jeremy', age: 5 }, { name: 'Samantha', age: 4 }]
+}
 
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
@@ -288,7 +302,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-// let context1 = workout
+let context1 = workout
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -301,6 +315,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-// let context2 = window
+let context2 = window
 //let context2 = global
 //let context2 = workout

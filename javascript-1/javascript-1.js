@@ -286,7 +286,7 @@ let teachStay = teachTrick.bind(fido, 'stay')
     Remember to use the 'this' keyword to access values from the context that you will apply.
 */
 
-let dogIntro = (treat, toy) => {
+function dogIntro(treat, toy) {
     return (`${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`)
 }
 
@@ -348,13 +348,13 @@ Phone.prototype.sell = function () {
     return `${this.brand} ${this.model} has been sold`;
 }
 
-phone2.sell;
-console.log(phone2)
+// phone2.sell;
+// console.log(phone2)
 
-Phone.prototype.addStorage = function () {
-    this.storage += 100;
-    return this;
-}
+// Phone.prototype.addStorage = function () {
+//     this.storage += 100;
+//     return this;
+// }
 
-phone2.addStorage
-console.log(phone2)
+// phone2.addStorage
+// console.log(phone2)
