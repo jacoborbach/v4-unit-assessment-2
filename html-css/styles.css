@@ -46,21 +46,15 @@ a {
 
 /* Pre-Fold Content */
 
-
-img {
-    
-    border: solid white 30px;
-    box-shadow: 10px 10px;
-}
-
 #firstSection {
     display: flex;
     justify-content: space-around;
     margin: 40px;
 }
 
-img {
-    margin-left: 100px;
+#profileImage {
+    border: solid white 30px;
+    box-shadow: 10px 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -77,7 +71,27 @@ ol {
     flex-direction: column;
     align-items: center;
 }
-/* section div {
-    margin: 30px 110px 10px 110px;
-} */
 
+#firstImageSection {
+    display: flex;
+    justify-content: center;
+}
+
+#secondImageSection {
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder {
+    margin: 10px 20px;
+    
+}
+
+#secondHeader {
+    text-align: inherit;
+}
+
+footer {
+    background-color: rgb(42, 171, 226);
+    padding: 20px;
+}
