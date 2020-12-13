@@ -170,7 +170,13 @@ const classes = [
     all online classes with no homework.
 */
 
-//CODE HERE
+// for (let i = 0; i < classes.length; i++) {
+//     for (let key in obj) {
+//         if (obj[key] === true) {
+//             obj[key] = false;
+//         }
+//     }
+// }
 
 
 ////////////////////PROBLEM 10////////////////////
@@ -186,7 +192,17 @@ const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n']
 let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
-//CODE HERE
+for (let i = 0; i < lettersToPair.length; i++) {
+    for (let j = 1; j < lettersToPair.length; j++) {
+        if (lettersToPair[i] === lettersToPair[j]) {
+            let firstNumber = lettersToPair[i].indexOf;
+            let SecondNumber = lettersToPair[j].indexOf;
+            let newArray = [];
+            newArray.push(firstNumber, SecondNumber);
+            pairsArray.push(newArray);
+        }
+    }
+}
 
 
 
@@ -203,7 +219,12 @@ let pairsArray = []
     Those values should come from the functions parameters: name, age, breed, tricks (in order).
 */
 
-//CODE HERE
+function Dog(name, age, breed, tricks) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks = tricks;
+}
 
 
 /*
@@ -212,8 +233,8 @@ let pairsArray = []
     Store the result in a variable called 'fido'.
 */
 
-//CODE HERE
-
+const fido = new Dog('Fido', 3, 'Jack Russell', ['sit', 'shake'])
+console.log(fido)
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -222,7 +243,9 @@ let pairsArray = []
     NAME will come from that context, so you should reference 'this.name' to get the correct name.
 */
 
-//CODE HERE
+function bark() {
+    return (`${this.name} says bark!`)
+}
 
 
 /*
@@ -230,7 +253,7 @@ let pairsArray = []
     and saving the result to a variable called fidoSpeak.
 */
 
-//CODE HERE
+let fidoSpeak = bark.call(fido);
 
 
 ////////////////////PROBLEM 13////////////////////
@@ -241,7 +264,10 @@ let pairsArray = []
     Tricks will come from that context, so you should reference 'this.tricks' to access the correct array.
 */
 
-//CODE HERE
+function teachTrick(trick) {
+    this.tricks.push(trick);
+    return this.tricks;
+}
 
 
 /*
@@ -249,7 +275,7 @@ let pairsArray = []
     Save the result to a variable called 'teachStay'.
 */
 
-//CODE HERE
+let teachStay = teachTrick.bind(fido, 'stay')
 
 
 ////////////////////PROBLEM 14////////////////////
@@ -260,7 +286,9 @@ let pairsArray = []
     Remember to use the 'this' keyword to access values from the context that you will apply.
 */
 
-//CODE HERE
+let dogIntro = (treat, toy) => {
+    return (`${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`)
+}
 
 
 /*
@@ -269,7 +297,8 @@ let pairsArray = []
     and save the result to a variable called fidoIntro.
 */
 
-//CODE HERE
+let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball'])
+console.log(fidoIntro)
 
 
 ////////////////////PROBLEM 15////////////////////
@@ -279,7 +308,13 @@ let pairsArray = []
     Those values should come from the function's parameters: brand, model, storage, color, sold (in order).
 */
 
-//CODE HERE
+function Phone(brand, model, storage, color, sold) {
+    this.brand = brand;
+    this.model = model;
+    this.storage = storage;
+    this.color = color;
+    this.sold = sold;
+}
 
 
 /*
@@ -294,11 +329,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+let phone1 = new Phone('iPhone', '12', 250, 'white', false);
 
-  // let phone2 = 
+let phone2 = new Phone('Samsung Galaxy', '10', 320, 'black', false);
 
-  // let phone3 = 
+let phone3 = new Phone('Google Phone', '3', 500, 'grey', false);
 
 /*
     Last, add a prototype method to Phone.
@@ -308,5 +343,18 @@ let pairsArray = []
     Don't forget about the context of BRAND and MODEL.
 */
 
-//CODE HERE
+Phone.prototype.sell = function () {
+    this.sold = true;
+    return `${this.brand} ${this.model} has been sold`;
+}
 
+phone2.sell;
+console.log(phone2)
+
+Phone.prototype.addStorage = function () {
+    this.storage += 100;
+    return this;
+}
+
+phone2.addStorage
+console.log(phone2)
